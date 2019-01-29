@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'tentang/visi_misi'
+  get 'tentang/tekad_urakat'
+  get 'tentang/tekad_pendakat'
   get 'tentang/visi-misi'
   get 'tentang/tekad-urakat'
   get 'tentang/tekad-pendakat'
