@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'galeri/foto'
+  get 'galeri/video'
   get 'data/keagamaan_katolik'
   get 'data/pendidikan_katolik'
   get 'tentang/visi_misi'
