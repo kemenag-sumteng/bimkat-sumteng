@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   #
   devise_scope :user do
     get 'masuk_ke_website_bimas_katolik', to: 'devise/sessions#new'
+    get 'mendaftar_ke_website_bimas_katolik', to: 'devise/registrations#new'
   end
 
   devise_for :users, :controllers => {:registrations => "registrations"}
