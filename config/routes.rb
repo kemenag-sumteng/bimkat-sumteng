@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     get 'masuk_ke_website_bimas_katolik', to: 'devise/sessions#new'
   end
 
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "registrations"}
   get 'laporan/penyuluh_agama_katolik'
   get 'laporan/kinerja_pegawai_bimkat_sumteng'
   get 'informasi/berita_terkini'
