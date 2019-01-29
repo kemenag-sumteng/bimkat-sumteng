@@ -9,6 +9,7 @@ gem 'jquery-rails'
 
 # Add Form
 gem 'simple_form'
+gem 'bootstrap_form'
 
 # Add authentication
 gem 'devise'
