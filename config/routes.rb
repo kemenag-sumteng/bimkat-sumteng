@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   get 'laporan/penyuluh_agama_katolik'
   get 'laporan/kinerja_pegawai_bimkat_sumteng'
   get 'informasi/berita_terkini'
