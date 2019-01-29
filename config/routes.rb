@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'data/keagamaan_katolik'
+  get 'data/pendidikan_katolik'
   get 'tentang/visi_misi'
   get 'tentang/tekad_urakat'
   get 'tentang/tekad_pendakat'
