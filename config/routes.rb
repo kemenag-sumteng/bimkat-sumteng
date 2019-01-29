@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'laporan/penyuluh_agama_katolik'
+  get 'laporan/kinerja_pegawai_bimkat_sumteng'
   get 'informasi/berita_terkini'
   get 'informasi/pengumuman'
   get 'galeri/foto'
