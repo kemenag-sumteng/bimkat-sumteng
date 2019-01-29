@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  #
+  devise_scope :user do
+    get 'masuk_ke_website_bimas_katolik', to: 'devise/sessions#new'
+  end
 
   devise_for :users
   get 'laporan/penyuluh_agama_katolik'
