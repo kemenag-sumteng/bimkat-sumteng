@@ -1,0 +1,2 @@
+class Laporan < ApplicationRecord
+end
