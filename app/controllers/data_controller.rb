@@ -4,4 +4,8 @@ class DataController < ApplicationController
 
   def pendidikan_katolik
   end
+
+  def index
+    @arsip_data = ArsipData.limit(5)
+  end
 end

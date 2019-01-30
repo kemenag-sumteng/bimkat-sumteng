@@ -10,10 +10,61 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_29_092504) do
+ActiveRecord::Schema.define(version: 2019_01_30_023254) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "arsip_data", force: :cascade do |t|
+    t.string "judul"
+    t.text "keterangan"
+    t.bigint "kategori_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["kategori_id"], name: "index_arsip_data_on_kategori_id"
+    t.index ["user_id"], name: "index_arsip_data_on_user_id"
+  end
+
+  create_table "galeri", force: :cascade do |t|
+    t.string "judul"
+    t.text "keterangan"
+    t.bigint "kategori_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["kategori_id"], name: "index_galeri_on_kategori_id"
+    t.index ["user_id"], name: "index_galeri_on_user_id"
+  end
+
+  create_table "informasi", force: :cascade do |t|
+    t.string "judul"
+    t.text "keterangan"
+    t.bigint "kategori_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["kategori_id"], name: "index_informasi_on_kategori_id"
+    t.index ["user_id"], name: "index_informasi_on_user_id"
+  end
+
+  create_table "kategori", force: :cascade do |t|
+    t.string "nama"
+    t.string "unit"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "laporan", force: :cascade do |t|
+    t.string "judul"
+    t.text "keterangan"
+    t.bigint "kategori_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["kategori_id"], name: "index_laporan_on_kategori_id"
+    t.index ["user_id"], name: "index_laporan_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "nama", default: "", null: false
