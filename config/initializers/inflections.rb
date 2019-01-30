@@ -15,5 +15,8 @@
 #   inflect.acronym 'RESTful'
 # end
 ActiveSupport::Inflector.inflections(:en) do |inflect|
-  inflect.irregular 'data', 'data'
+  inflect.irregular 'kategoris', 'kategori'
+  inflect.irregular 'galeris', 'galeri'
+  inflect.irregular 'informasis', 'informasi'
+  inflect.irregular 'laporans', 'laporan'
 end
